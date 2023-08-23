@@ -3,18 +3,12 @@ import { cookies } from "next/headers";
 
 function useLoggedInstat() {
   if (typeof window !== "undefined") {
-    if (
-      document.cookie
-        .split(";")
-        .find((v) => {
-          v.startsWith("isLoggedIn");
-        })
-        ?.split("=")[0] === "1"
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+    const cookieArr = document.cookie.split(";").map((v) => v.trim());
+
+    // console.log(cookieArr.find((v) => v.startsWith("isLoggedIn")));
+    const loggedInCookie = cookieArr.find((v) => v.startsWith("isLoggedIn"));
+
+    return loggedInCookie?.split("=")[1] === "1";
   }
 }
 export default useLoggedInstat;
