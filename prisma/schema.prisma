@@ -28,3 +28,27 @@ id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   userId    String   @db.Uuid
 
 }
+
+
+model Item{
+id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+src String
+from String
+name String
+price String
+timeStamp String
+franchise String
+
+
+
+}
+
+
+model franchise{
+id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+
+name String 
+banner String
+
+
+}

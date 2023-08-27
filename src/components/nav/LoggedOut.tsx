@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 function LoggedOutComponent() {
   const [signUpState, setSignUpState] = useState(false);
   const [signInState, SetSignInState] = useState(false);
-
+  const router = useRouter();
   return (
     <>
       {signUpState && (
@@ -16,7 +16,10 @@ function LoggedOutComponent() {
           onClick={() => {
             setSignUpState(false);
           }}
-          onFinished={() => setSignUpState(false)}
+          onFinished={() => {
+            setSignUpState(false);
+            router.push("/");
+          }}
         />
       )}
       {signInState && (

@@ -4,7 +4,7 @@ import ActionHub from "./ActionHub";
 import Link from "next/link";
 function UserBar() {
   return (
-    <div className="flex flex-row justify-between w-screen">
+    <div className="flex flex-row justify-between w-screen mb-24">
       {/*todo change to logo*/}
       <div className=" rounded-md ml-5 mt-4">
         <Image
