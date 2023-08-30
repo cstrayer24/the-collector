@@ -6,7 +6,7 @@ function ShopPageTop({ imgUrl }: { imgUrl: string }) {
     <div className="w-screen h-72  bg-top bg-cover flex justify-center ">
       <Link
         href={"/"}
-        className=" p-4 border-tc-pink border-solid block relative right-4]"
+        className=" p-4 border-tc-pink border-solid block relative right-4 "
       >
         <Image
           placeholder="empty"
