@@ -4,6 +4,7 @@ import exp from "constants";
 import "@/app/globals.css";
 import HomeLayout from "../home/HomeLayout";
 import ShopComponent from "../shop";
+import LinkBar from "../nav/LinkBar";
 function ShopPageComp({
   franchise,
   items,
@@ -12,8 +13,12 @@ function ShopPageComp({
   items: Prisma.ItemCreateInput[];
 }) {
   return (
-    <div>
+    <div className=" bg-tc-darkblue">
       <ShopPageTop imgUrl={franchise.banner} />
+
+      <div className=" mb-[10rem]">
+        <LinkBar />
+      </div>
       <HomeLayout>
         {items.map((v, index) => {
           return (
