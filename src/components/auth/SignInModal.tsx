@@ -27,7 +27,7 @@ function SignInModal({
     }
   }
   return (
-    <div className=" h-screen w-screen grid place-items-center bg-gradient-to-tr from-tc-darkpurple to-tc-lightpurple absolute top-0 left-0 opacity-70">
+    <div className=" h-screen w-screen grid place-items-center bg-gradient-to-tr from-tc-darkpurple to-tc-lightpurple absolute top-0 left-0 ">
       <div className=" w-[50rem] h-[30rem] mt-7 bg-tc-darkpurple rounded-md border-tcWhite grid border border-dotted border-spacing-4 text-tcWhite">
         <div className="w-full h-12 text-tcWhite text text-2xl">
           <button
